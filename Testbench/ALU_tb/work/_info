@@ -1,0 +1,74 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vALU
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 !s100 `:hzd4fZnK3:_iRM4_H8f2
+Z3 I90oINaj[Rja@NGf`]hfEe1
+Z4 VXM6TVTZPO>8bnb9EnK<0l1
+Z5 !s105 ALU_sv_unit
+S1
+Z6 dC:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ALU_tb
+Z7 w1622312510
+Z8 8C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU.sv
+Z9 FC:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU.sv
+L0 1
+Z10 OV;L;10.1d;51
+r1
+31
+Z11 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU.sv|
+Z12 o-work work -sv -O0
+Z13 n@a@l@u
+Z14 !s108 1622463251.960000
+Z15 !s107 C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vALU_tb
+R1
+Z16 I^Z]2<UN?]SEn7<F`:3]lA2
+Z17 VE`_QLbcAmOeKZDFMXUl3B3
+Z18 !s105 ALU_tb_sv_unit
+S1
+R6
+Z19 w1622463248
+Z20 8C:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ALU_tb\ALU_tb.sv
+Z21 FC:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ALU_tb\ALU_tb.sv
+L0 2
+R10
+r1
+31
+R12
+Z22 n@a@l@u_tb
+!i10b 1
+Z23 !s100 Aje>OG[?m>V?1aHUzBkgA3
+!s85 0
+Z24 !s108 1622463252.029000
+Z25 !s107 C:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ALU_tb\ALU_tb.sv|
+Z26 !s90 -reportprogress|300|-work|work|-sv|C:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ALU_tb\ALU_tb.sv|
+!s101 -O0
+vReg_1bit
+R1
+!i10b 1
+Z27 !s100 kG1B0AHGbGQo_5<SmRVgg2
+Z28 I7N3JadzCzcgZz`eDHmPUY2
+Z29 Ven`d:G:l[GPn7]X^eCCGK1
+Z30 !s105 Reg_1bit_sv_unit
+S1
+R6
+Z31 w1622009793
+Z32 8C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/Reg_1bit.sv
+Z33 FC:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/Reg_1bit.sv
+L0 1
+R10
+r1
+!s85 0
+31
+!s108 1622463252.088000
+!s107 C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/Reg_1bit.sv|
+Z34 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/Reg_1bit.sv|
+!s101 -O0
+R12
+Z35 n@reg_1bit

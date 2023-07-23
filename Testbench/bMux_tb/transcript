@@ -1,0 +1,16 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/bMux_tb/bMux_tb.mpf} 
+# Loading project bMux_tb
+vsim -gui work.bMux_tb
+# vsim -gui work.bMux_tb 
+# Loading sv_std.std
+# Loading work.bMux_tb
+# Loading work.bMux
+add wave  \
+sim:/bMux_tb/B_selMUX \
+sim:/bMux_tb/bBusMUX \
+sim:/bMux_tb/bData \
+sim:/bMux_tb/bit_extend \
+sim:/bMux_tb/inSwitch \
+sim:/bMux_tb/in_clk
+run

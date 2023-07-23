@@ -1,0 +1,23 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit_tb.mpf} 
+# Loading project ControlUnit_tb
+# Compile of ControlUnit.sv was successful.
+# Compile of ControlUnit_tb.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -gui work.ControlUnit_tb
+# vsim -gui work.ControlUnit_tb 
+# Loading sv_std.std
+# Loading work.ControlUnit_tb
+# Loading work.ControlUnit
+add wave  \
+sim:/ControlUnit_tb/opcodeData \
+sim:/ControlUnit_tb/in_clk \
+sim:/ControlUnit_tb/f_CU \
+sim:/ControlUnit_tb/B_sel_CU \
+sim:/ControlUnit_tb/write_a_CU \
+sim:/ControlUnit_tb/write_b_CU \
+sim:/ControlUnit_tb/write_o_CU \
+sim:/ControlUnit_tb/write_cz_CU \
+sim:/ControlUnit_tb/PC_sel_CU \
+sim:/ControlUnit_tb/write_pc_CU
+run

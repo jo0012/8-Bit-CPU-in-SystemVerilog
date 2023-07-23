@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vControlUnit
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 Igzi^61VI0a`WU8TZP9BTk1
+Z3 V5TLTnT=E@ORAC9HQ12AK80
+Z4 !s105 ControlUnit_sv_unit
+S1
+Z5 dC:\Users\Administrator\Desktop\RMIT Documents\Bachelor\2021\2021 Semester 1\Advanced Digital Design 1\Assignments\Assignment\Jo(s3479811) - EEET2475 Assignment\Assignment_TB\ControlUnit_tb
+Z6 w1622400506
+Z7 8C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit.sv
+Z8 FC:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit.sv
+L0 1
+Z9 OV;L;10.1d;51
+r1
+31
+Z10 o-work work -sv -O0
+Z11 n@control@unit
+!i10b 1
+Z12 !s100 EbjA41ml;?^>]<QP@]M@33
+!s85 0
+Z13 !s108 1622462933.256000
+Z14 !s107 C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit.sv|
+Z15 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit.sv|
+!s101 -O0
+vControlUnit_tb
+R1
+!i10b 1
+Z16 !s100 W:7k^kOUJm<AJmMaQoR8e0
+Z17 I=0Yi_BNnfAHif4i>?IFfM0
+Z18 V64fF;IN7C[B;Ram4_=?ef3
+Z19 !s105 ControlUnit_tb_sv_unit
+S1
+R5
+Z20 w1622023243
+Z21 8C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit_tb.sv
+Z22 FC:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit_tb.sv
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1622462935.427000
+!s107 C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit_tb.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ControlUnit_tb/ControlUnit_tb.sv|
+!s101 -O0
+R10
+Z24 n@control@unit_tb

@@ -1,0 +1,34 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU_tb.mpf} 
+# Loading project ALU_tb
+# Compile of ALU.sv was successful.
+# Compile of ALU_tb.sv was successful.
+# Compile of Reg_1bit.sv was successful.
+# 3 compiles, 0 failed with no errors. 
+vsim -gui work.ALU_tb
+# vsim -gui work.ALU_tb 
+# Loading sv_std.std
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.Reg_1bit
+# ** Warning: (vsim-3017) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU_tb.sv(11): [TFMPC] - Too few port connections. Expected 9, found 8.
+# 
+#         Region: /ALU_tb/DUT
+# ** Warning: (vsim-3722) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ALU_tb/ALU_tb.sv(11): [TFMPC] - Missing connection for port 'rstn_ALU'.
+# 
+add wave  \
+sim:/ALU_tb/in_clk \
+sim:/ALU_tb/rstn_ALU \
+sim:/ALU_tb/write_cz \
+sim:/ALU_tb/aBusIn \
+sim:/ALU_tb/bBusIn \
+sim:/ALU_tb/fData \
+sim:/ALU_tb/cBusOut \
+sim:/ALU_tb/CF_ALU \
+sim:/ALU_tb/ZF_ALU
+run
+run
+# Compile of ALU.sv was successful.
+# Compile of ALU_tb.sv was successful.
+# Compile of Reg_1bit.sv was successful.
+# 3 compiles, 0 failed with no errors. 
