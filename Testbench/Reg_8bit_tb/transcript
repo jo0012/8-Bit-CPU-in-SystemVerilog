@@ -1,0 +1,21 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Reg_8bit_tb/Reg_8bit_tb.mpf} 
+# Loading project Reg_8bit_tb
+vsim -gui work.Reg_8bit_tb
+# vsim -gui work.Reg_8bit_tb 
+# Loading sv_std.std
+# Loading work.Reg_8bit_tb
+# Loading work.Reg_8bit
+# Compile of Reg_8bit.sv was successful.
+# Compile of Reg_8bit_tb.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+restart -f
+# Loading sv_std.std
+# Loading work.Reg_8bit_tb
+# Loading work.Reg_8bit
+add wave -position end  sim:/Reg_8bit_tb/RegIn
+add wave -position end  sim:/Reg_8bit_tb/in_clk
+add wave -position end  sim:/Reg_8bit_tb/rstn
+add wave -position end  sim:/Reg_8bit_tb/write_Reg
+add wave -position end  sim:/Reg_8bit_tb/RegOut
+run

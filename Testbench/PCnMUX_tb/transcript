@@ -1,0 +1,24 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/PCnMUX_tb/PCnMUX_tb.mpf} 
+# Loading project PCnMUX_tb
+# Compile of PCnMUX.sv was successful.
+# Compile of PCnMUX_tb.sv was successful.
+# Compile of Reg_8bit.sv was successful.
+# 3 compiles, 0 failed with no errors. 
+vsim -gui work.PCnMUX_tb
+# vsim -gui work.PCnMUX_tb 
+# Loading sv_std.std
+# Loading work.PCnMUX_tb
+# Loading work.PCnMUX
+# Loading work.Reg_8bit
+# Compile of PCnMUX.sv was successful.
+# Compile of PCnMUX_tb.sv was successful.
+# Compile of Reg_8bit.sv was successful.
+# 3 compiles, 0 failed with no errors. 
+add wave -position end  sim:/PCnMUX_tb/in_clk
+add wave -position end  sim:/PCnMUX_tb/in_rstn
+add wave -position end  sim:/PCnMUX_tb/write_pc
+add wave -position end  sim:/PCnMUX_tb/PC_sel
+add wave -position end  sim:/PCnMUX_tb/cBusData
+add wave -position end  sim:/PCnMUX_tb/addr_PC
+run

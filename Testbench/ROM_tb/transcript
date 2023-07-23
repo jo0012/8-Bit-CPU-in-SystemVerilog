@@ -1,0 +1,17 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/ROM_tb/ROM_tb.mpf} 
+# Loading project ROM_tb
+# Compile of ROM.sv was successful.
+# Compile of ROM_tb.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -gui work.ROM_tb
+# vsim -gui work.ROM_tb 
+# Loading sv_std.std
+# Loading work.ROM_tb
+# Loading work.ROM
+add wave  \
+sim:/ROM_tb/in_clk \
+sim:/ROM_tb/in_rstn \
+sim:/ROM_tb/addr_ROM \
+sim:/ROM_tb/data_out_ROM
+run
