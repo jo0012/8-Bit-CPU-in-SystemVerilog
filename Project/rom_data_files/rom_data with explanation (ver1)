@@ -1,0 +1,26 @@
+00	// no operation #1 Activate CF ZF
+50	// load input switches to into register a
+51	// load a into output
+60	// b = a
+A0	// a = a + b
+51	// load a into output
+40	// load 0 into register a
+51	// load a into output #1 End
+4a	// load 10 into register a #2 Experiment other instructions 
+51	// load a into output
+60	// b = a
+A0	// a = a + b
+51	// load a into output (20)
+B0	// a = a - b
+51	// load a into output (10)
+4d	// load 13 into register a
+51	// load a into output (13)
+C0	// a = a & b (a = 4'b1101 & 4'b1010 = 4'b1000 = 4'd8)
+51	// load a into output (8)
+4d	// load 10 into register a
+51	// load a into output (10)
+D0	// a = a | b (a = 4'b1101 | 4'b1010 = 4'b1111 = 4'd15)
+51	// load a into output (15)
+40	// load 0 into register a
+51	// load a into output (0)
+10	// JMP 0

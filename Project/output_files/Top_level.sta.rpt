@@ -1,0 +1,1251 @@
+TimeQuest Timing Analyzer report for Top_level
+Mon May 31 17:26:13 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Top_level                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C70F896C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 171.09 MHz ; 171.09 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -4.845 ; -146.690      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.694 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -41.222               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                        ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.845 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.928      ;
+; -4.797 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.122      ; 5.955      ;
+; -4.795 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.122      ; 5.953      ;
+; -4.794 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.877      ;
+; -4.786 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.896      ;
+; -4.735 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.845      ;
+; -4.725 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.879      ;
+; -4.721 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.854      ;
+; -4.719 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.852      ;
+; -4.701 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.784      ;
+; -4.679 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.812      ;
+; -4.677 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.810      ;
+; -4.674 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.828      ;
+; -4.672 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.683      ;
+; -4.670 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.803      ;
+; -4.668 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.801      ;
+; -4.660 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.743      ;
+; -4.642 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.752      ;
+; -4.641 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.099      ; 5.776      ;
+; -4.614 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.625      ;
+; -4.602 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.712      ;
+; -4.601 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.711      ;
+; -4.588 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.072      ; 5.696      ;
+; -4.581 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.735      ;
+; -4.580 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.143      ; 5.759      ;
+; -4.579 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.590      ;
+; -4.557 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.099      ; 5.692      ;
+; -4.548 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.681      ;
+; -4.546 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.679      ;
+; -4.544 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.555      ;
+; -4.541 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.695      ;
+; -4.540 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.694      ;
+; -4.538 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.621      ;
+; -4.536 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.669      ;
+; -4.534 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.667      ;
+; -4.528 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.638      ;
+; -4.515 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.625      ;
+; -4.493 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; 0.000      ; 5.529      ;
+; -4.493 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.504      ;
+; -4.489 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.622      ;
+; -4.482 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.615      ;
+; -4.479 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.589      ;
+; -4.478 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.611      ;
+; -4.477 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.587      ;
+; -4.463 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.546      ;
+; -4.442 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.575      ;
+; -4.440 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.573      ;
+; -4.439 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.549      ;
+; -4.431 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.564      ;
+; -4.422 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.532      ;
+; -4.419 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.047      ; 5.502      ;
+; -4.418 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.572      ;
+; -4.416 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.427      ;
+; -4.400 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.411      ;
+; -4.396 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.529      ;
+; -4.394 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.527      ;
+; -4.389 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.522      ;
+; -4.385 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.518      ;
+; -4.382 ; ROM:ROM1|data_out_ROM[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.073      ; 5.491      ;
+; -4.360 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.470      ;
+; -4.359 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.370      ;
+; -4.354 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 1.000        ; -0.025     ; 5.365      ;
+; -4.354 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.143      ; 5.533      ;
+; -4.343 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.453      ;
+; -4.331 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.073      ; 5.440      ;
+; -4.325 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.479      ;
+; -4.308 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.418      ;
+; -4.301 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.434      ;
+; -4.299 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.453      ;
+; -4.297 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.308      ;
+; -4.295 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.428      ;
+; -4.293 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.426      ;
+; -4.291 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 1.000        ; -0.025     ; 5.302      ;
+; -4.274 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.428      ;
+; -4.261 ; ROM:ROM1|data_out_ROM[6] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 1.000        ; -0.025     ; 5.272      ;
+; -4.259 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.369      ;
+; -4.244 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; clk          ; clk         ; 1.000        ; 0.073      ; 5.353      ;
+; -4.244 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.255      ;
+; -4.239 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.349      ;
+; -4.238 ; ROM:ROM1|data_out_ROM[6] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.073      ; 5.347      ;
+; -4.237 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.099      ; 5.372      ;
+; -4.236 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.118      ; 5.390      ;
+; -4.233 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.366      ;
+; -4.233 ; ROM:ROM1|data_out_ROM[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 1.000        ; -0.025     ; 5.244      ;
+; -4.232 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.243      ;
+; -4.226 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.359      ;
+; -4.222 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.355      ;
+; -4.206 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.339      ;
+; -4.204 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.122      ; 5.362      ;
+; -4.203 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.313      ;
+; -4.202 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.097      ; 5.335      ;
+; -4.200 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.122      ; 5.358      ;
+; -4.198 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.094      ; 5.328      ;
+; -4.198 ; ROM:ROM1|data_out_ROM[6] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 1.000        ; -0.025     ; 5.209      ;
+; -4.197 ; ROM:ROM1|data_out_ROM[2] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.073      ; 5.306      ;
+; -4.195 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.094      ; 5.325      ;
+; -4.183 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.194      ;
+; -4.183 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.025     ; 5.194      ;
+; -4.176 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.074      ; 5.286      ;
+; -4.156 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; -0.028     ; 5.164      ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                    ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.694 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.025      ; 0.985      ;
+; 0.827 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.118      ;
+; 0.854 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.120      ;
+; 0.964 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.097      ; 1.327      ;
+; 1.180 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.471      ;
+; 1.180 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.471      ;
+; 1.187 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.120      ; 1.573      ;
+; 1.190 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.120      ; 1.576      ;
+; 1.206 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.210 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; 0.094      ; 1.570      ;
+; 1.333 ; Reg_8bit:bReg|RegOut[7]              ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.002      ; 1.601      ;
+; 1.339 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; -0.073     ; 1.532      ;
+; 1.340 ; Reg_8bit:aReg|RegOut[5]              ; Reg_8bit:bReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.606      ;
+; 1.367 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; -0.073     ; 1.560      ;
+; 1.377 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.668      ;
+; 1.378 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.669      ;
+; 1.398 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.689      ;
+; 1.432 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.771      ;
+; 1.435 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.774      ;
+; 1.436 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.727      ;
+; 1.438 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:bReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.704      ;
+; 1.458 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.749      ;
+; 1.483 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.774      ;
+; 1.516 ; Reg_8bit:aReg|RegOut[6]              ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.782      ;
+; 1.540 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.781      ;
+; 1.566 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.557      ; 2.389      ;
+; 1.588 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.829      ;
+; 1.588 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.829      ;
+; 1.589 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; 0.557      ; 2.412      ;
+; 1.590 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.120      ; 1.976      ;
+; 1.597 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; -0.098     ; 1.765      ;
+; 1.599 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.447      ;
+; 1.615 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.094      ; 1.975      ;
+; 1.618 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.094      ; 1.978      ;
+; 1.620 ; Reg_8bit:aReg|RegOut[3]              ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.886      ;
+; 1.623 ; Reg_8bit:aReg|RegOut[3]              ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.889      ;
+; 1.637 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; 0.557      ; 2.460      ;
+; 1.637 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; 0.557      ; 2.460      ;
+; 1.639 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.880      ;
+; 1.648 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.097      ; 2.011      ;
+; 1.658 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.097      ; 2.021      ;
+; 1.675 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; -0.073     ; 1.868      ;
+; 1.675 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; -0.073     ; 1.868      ;
+; 1.687 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.928      ;
+; 1.687 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.025     ; 1.928      ;
+; 1.699 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.025      ; 1.990      ;
+; 1.701 ; Reg_8bit:aReg|RegOut[3]              ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; -0.021     ; 1.946      ;
+; 1.707 ; Reg_8bit:bReg|RegOut[6]              ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.002      ; 1.975      ;
+; 1.721 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; 0.094      ; 2.081      ;
+; 1.730 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.118      ; 2.114      ;
+; 1.734 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.120      ; 2.120      ;
+; 1.739 ; Reg_8bit:aReg|RegOut[0]              ; Reg_8bit:bReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; -0.097     ; 1.908      ;
+; 1.748 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.702      ; 2.716      ;
+; 1.748 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.702      ; 2.716      ;
+; 1.749 ; Reg_8bit:aReg|RegOut[2]              ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.015      ;
+; 1.812 ; Reg_8bit:aReg|RegOut[0]              ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.122     ; 1.956      ;
+; 1.815 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.008      ;
+; 1.820 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.557      ; 2.643      ;
+; 1.823 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.557      ; 2.646      ;
+; 1.833 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.124      ;
+; 1.840 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.688      ;
+; 1.845 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.693      ;
+; 1.853 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.701      ;
+; 1.856 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.704      ;
+; 1.867 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.158      ;
+; 1.871 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.719      ;
+; 1.873 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.721      ;
+; 1.875 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.068      ;
+; 1.876 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.582      ; 2.724      ;
+; 1.880 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.146      ;
+; 1.914 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.097      ; 2.277      ;
+; 1.918 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.025     ; 2.159      ;
+; 1.920 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.118      ; 2.304      ;
+; 1.926 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.217      ;
+; 1.927 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.218      ;
+; 1.933 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.074      ; 2.273      ;
+; 1.936 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; -0.002     ; 2.200      ;
+; 1.947 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.238      ;
+; 1.956 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.700      ; 2.922      ;
+; 1.956 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.700      ; 2.922      ;
+; 1.975 ; Reg_8bit:aReg|RegOut[4]              ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; -0.003     ; 2.238      ;
+; 1.980 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.246      ;
+; 1.980 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.246      ;
+; 1.981 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.074      ; 2.321      ;
+; 1.988 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.025      ; 2.279      ;
+; 1.990 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.183      ;
+; 1.997 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; -0.046     ; 2.217      ;
+; 2.007 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:yReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; 0.554      ; 2.827      ;
+; 2.021 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.629      ; 2.916      ;
+; 2.027 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.220      ;
+; 2.033 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 0.000        ; 0.097      ; 2.396      ;
+; 2.037 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 0.000        ; 0.097      ; 2.400      ;
+; 2.059 ; Reg_8bit:aReg|RegOut[6]              ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; -0.002     ; 2.323      ;
+; 2.060 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:yReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; -0.028     ; 2.298      ;
+; 2.063 ; Reg_8bit:bReg|RegOut[7]              ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.329      ;
+; 2.065 ; Reg_8bit:aReg|RegOut[5]              ; Reg_8bit:aReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.331      ;
+; 2.070 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 0.000        ; 0.074      ; 2.410      ;
+; 2.074 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; -0.098     ; 2.242      ;
+; 2.087 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.280      ;
+; 2.087 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; -0.073     ; 2.280      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[7]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ROM1|data_out_ROM[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM1|data_out_ROM[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ROM1|data_out_ROM[1]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; inputSignal[*]  ; clk        ; 10.553 ; 10.553 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; 10.553 ; 10.553 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; 10.265 ; 10.265 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; 10.346 ; 10.346 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; 9.652  ; 9.652  ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; 10.167 ; 10.167 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; 9.560  ; 9.560  ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; 9.996  ; 9.996  ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; 9.234  ; 9.234  ; Rise       ; clk             ;
+; rstn            ; clk        ; 5.518  ; 5.518  ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; inputSignal[*]  ; clk        ; -6.748 ; -6.748 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; -7.823 ; -7.823 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; -8.190 ; -8.190 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; -7.676 ; -7.676 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; -7.354 ; -7.354 ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; -7.833 ; -7.833 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; -7.072 ; -7.072 ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; -7.190 ; -7.190 ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; -6.748 ; -6.748 ; Rise       ; clk             ;
+; rstn            ; clk        ; -3.472 ; -3.472 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 17.651 ; 17.651 ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 10.749 ; 10.749 ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 13.388 ; 13.388 ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 12.482 ; 12.482 ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 16.502 ; 16.502 ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 17.651 ; 17.651 ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 16.472 ; 16.472 ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 24.173 ; 24.173 ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 21.589 ; 21.589 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 23.315 ; 23.315 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 24.173 ; 24.173 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 21.615 ; 21.615 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 22.793 ; 22.793 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 21.416 ; 21.416 ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 21.553 ; 21.553 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 28.613 ; 28.613 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 27.437 ; 27.437 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 27.681 ; 27.681 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 27.623 ; 27.623 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 27.897 ; 27.897 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 27.689 ; 27.689 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 27.925 ; 27.925 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 28.613 ; 28.613 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 10.189 ; 10.189 ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 10.189 ; 10.189 ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 11.013 ; 11.013 ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 10.284 ; 10.284 ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 14.127 ; 14.127 ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 15.276 ; 15.276 ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 14.097 ; 14.097 ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 9.927  ; 9.927  ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 10.955 ; 10.955 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 12.695 ; 12.695 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 12.688 ; 12.688 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 10.994 ; 10.994 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 11.343 ; 11.343 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 9.927  ; 9.927  ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 10.922 ; 10.922 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 12.519 ; 12.519 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 12.519 ; 12.519 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 12.765 ; 12.765 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 12.805 ; 12.805 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 13.003 ; 13.003 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 12.839 ; 12.839 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 13.070 ; 13.070 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 13.696 ; 13.696 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.570 ; -42.052       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.290 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -41.222               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                        ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.570 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.622      ;
+; -1.558 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.593      ;
+; -1.551 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.603      ;
+; -1.539 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.574      ;
+; -1.535 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.614      ;
+; -1.516 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.595      ;
+; -1.510 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.562      ;
+; -1.504 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.571      ;
+; -1.502 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.569      ;
+; -1.498 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.533      ;
+; -1.498 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.072      ; 2.602      ;
+; -1.496 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.072      ; 2.600      ;
+; -1.485 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.552      ;
+; -1.483 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.550      ;
+; -1.482 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.534      ;
+; -1.478 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.057      ; 2.567      ;
+; -1.475 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.554      ;
+; -1.472 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.524      ;
+; -1.470 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.505      ;
+; -1.464 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.460      ;
+; -1.461 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.528      ;
+; -1.459 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.526      ;
+; -1.452 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.040      ; 2.524      ;
+; -1.451 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.503      ;
+; -1.447 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.526      ;
+; -1.443 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.084      ; 2.559      ;
+; -1.441 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.057      ; 2.530      ;
+; -1.439 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.491      ;
+; -1.437 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.516      ;
+; -1.436 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.432      ;
+; -1.435 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.431      ;
+; -1.432 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.484      ;
+; -1.427 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.462      ;
+; -1.423 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.419      ;
+; -1.417 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.413      ;
+; -1.416 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.483      ;
+; -1.414 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.481      ;
+; -1.412 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.464      ;
+; -1.411 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.446      ;
+; -1.411 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.478      ;
+; -1.409 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.476      ;
+; -1.404 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.483      ;
+; -1.404 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.456      ;
+; -1.399 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.451      ;
+; -1.396 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.463      ;
+; -1.393 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.460      ;
+; -1.391 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.458      ;
+; -1.389 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.456      ;
+; -1.387 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[3]              ; clk          ; clk         ; 1.000        ; 0.003      ; 2.422      ;
+; -1.379 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; 0.001      ; 2.412      ;
+; -1.376 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.372      ;
+; -1.374 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.441      ;
+; -1.372 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.439      ;
+; -1.371 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.423      ;
+; -1.364 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.443      ;
+; -1.363 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.415      ;
+; -1.362 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.429      ;
+; -1.355 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.407      ;
+; -1.355 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.422      ;
+; -1.354 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 1.000        ; -0.037     ; 2.349      ;
+; -1.354 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.406      ;
+; -1.352 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.348      ;
+; -1.352 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.419      ;
+; -1.350 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.417      ;
+; -1.348 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.344      ;
+; -1.348 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.415      ;
+; -1.344 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.423      ;
+; -1.336 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.403      ;
+; -1.334 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.084      ; 2.450      ;
+; -1.333 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:aReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.400      ;
+; -1.332 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.399      ;
+; -1.331 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:bReg|RegOut[4]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.398      ;
+; -1.330 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.382      ;
+; -1.329 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.381      ;
+; -1.325 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.404      ;
+; -1.323 ; ROM:ROM1|data_out_ROM[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.019      ; 2.374      ;
+; -1.313 ; ROM:ROM1|data_out_ROM[6] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 1.000        ; -0.037     ; 2.308      ;
+; -1.312 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.308      ;
+; -1.310 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.377      ;
+; -1.306 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.373      ;
+; -1.305 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.301      ;
+; -1.304 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 1.000        ; 0.019      ; 2.355      ;
+; -1.303 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.057      ; 2.392      ;
+; -1.301 ; ROM:ROM1|data_out_ROM[0] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 2.296      ;
+; -1.300 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:yReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.352      ;
+; -1.297 ; ROM:ROM1|data_out_ROM[6] ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.047      ; 2.376      ;
+; -1.295 ; ROM:ROM1|data_out_ROM[1] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.362      ;
+; -1.289 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[5]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.285      ;
+; -1.288 ; ROM:ROM1|data_out_ROM[7] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.284      ;
+; -1.285 ; ROM:ROM1|data_out_ROM[0] ; Reg_8bit:yReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; -0.037     ; 2.280      ;
+; -1.284 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.351      ;
+; -1.284 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.072      ; 2.388      ;
+; -1.281 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.348      ;
+; -1.280 ; Reg_8bit:bReg|RegOut[0]  ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 1.000        ; 0.020      ; 2.332      ;
+; -1.280 ; ROM:ROM1|data_out_ROM[3] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.072      ; 2.384      ;
+; -1.279 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.346      ;
+; -1.277 ; ROM:ROM1|data_out_ROM[4] ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.344      ;
+; -1.275 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:yReg|RegOut[2]              ; clk          ; clk         ; 1.000        ; -0.036     ; 2.271      ;
+; -1.272 ; ROM:ROM1|data_out_ROM[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 2.267      ;
+; -1.269 ; ROM:ROM1|data_out_ROM[2] ; Reg_8bit:aReg|RegOut[0]              ; clk          ; clk         ; 1.000        ; 0.035      ; 2.336      ;
++--------+--------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                    ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.290 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.479      ;
+; 0.342 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.531      ;
+; 0.398 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.550      ;
+; 0.451 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.638      ;
+; 0.507 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.696      ;
+; 0.508 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.697      ;
+; 0.530 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.556 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.049      ; 0.757      ;
+; 0.557 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; 0.030      ; 0.739      ;
+; 0.560 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.049      ; 0.761      ;
+; 0.582 ; Reg_8bit:aReg|RegOut[5]              ; Reg_8bit:bReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.734      ;
+; 0.589 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.778      ;
+; 0.590 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.779      ;
+; 0.605 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.794      ;
+; 0.607 ; Reg_8bit:bReg|RegOut[7]              ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.002      ; 0.761      ;
+; 0.608 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.741      ;
+; 0.610 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.799      ;
+; 0.614 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.747      ;
+; 0.633 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.822      ;
+; 0.634 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.823      ;
+; 0.645 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:bReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.670 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; 0.019      ; 0.841      ;
+; 0.673 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; clk          ; clk         ; 0.000        ; 0.019      ; 0.844      ;
+; 0.684 ; Reg_8bit:aReg|RegOut[6]              ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.132      ;
+; 0.691 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.102      ;
+; 0.700 ; Reg_8bit:aReg|RegOut[3]              ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.852      ;
+; 0.703 ; Reg_8bit:aReg|RegOut[3]              ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.001      ; 0.856      ;
+; 0.717 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.832      ;
+; 0.718 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.833      ;
+; 0.719 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.049      ; 0.920      ;
+; 0.721 ; ROM:ROM1|data_out_ROM[6]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.836      ;
+; 0.726 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.029      ; 0.907      ;
+; 0.729 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.030      ; 0.911      ;
+; 0.735 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.924      ;
+; 0.736 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.869      ;
+; 0.739 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.872      ;
+; 0.741 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; 0.259      ; 1.152      ;
+; 0.742 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; 0.259      ; 1.153      ;
+; 0.745 ; Reg_8bit:aReg|RegOut[3]              ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; -0.010     ; 0.887      ;
+; 0.745 ; ROM:ROM1|data_out_ROM[5]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; 0.259      ; 1.156      ;
+; 0.746 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.933      ;
+; 0.751 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.938      ;
+; 0.754 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; -0.056     ; 0.850      ;
+; 0.760 ; Reg_8bit:aReg|RegOut[2]              ; Reg_8bit:bReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.912      ;
+; 0.763 ; Reg_8bit:aReg|RegOut[0]              ; Reg_8bit:bReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; -0.035     ; 0.880      ;
+; 0.770 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; 0.030      ; 0.952      ;
+; 0.770 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.885      ;
+; 0.771 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.886      ;
+; 0.772 ; Reg_8bit:bReg|RegOut[6]              ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.002      ; 0.926      ;
+; 0.774 ; ROM:ROM1|data_out_ROM[4]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.889      ;
+; 0.806 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.254      ;
+; 0.807 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.255      ;
+; 0.809 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.047      ; 1.008      ;
+; 0.809 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.257      ;
+; 0.811 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.259      ;
+; 0.811 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.259      ;
+; 0.813 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.002      ;
+; 0.813 ; Reg_8bit:aReg|RegOut[0]              ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ; clk          ; clk         ; 0.000        ; -0.072     ; 0.893      ;
+; 0.817 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.950      ;
+; 0.817 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.006      ;
+; 0.817 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.265      ;
+; 0.824 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; -0.019     ; 0.957      ;
+; 0.824 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.272      ;
+; 0.824 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.235      ;
+; 0.830 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.019      ;
+; 0.831 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.020      ;
+; 0.831 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.983      ;
+; 0.831 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.242      ;
+; 0.839 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:aReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.345      ; 1.336      ;
+; 0.839 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.345      ; 1.336      ;
+; 0.842 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[7]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.031      ;
+; 0.848 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; 0.037      ; 1.037      ;
+; 0.864 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.016      ;
+; 0.870 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; -0.002     ; 1.020      ;
+; 0.871 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:aReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.072      ;
+; 0.880 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[0]             ; clk          ; clk         ; 0.000        ; -0.019     ; 1.013      ;
+; 0.882 ; ROM:ROM1|data_out_ROM[7]             ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; clk          ; clk         ; 0.000        ; -0.037     ; 0.997      ;
+; 0.884 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[2]              ; clk          ; clk         ; 0.000        ; 0.035      ; 1.071      ;
+; 0.888 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; -0.019     ; 1.021      ;
+; 0.895 ; Reg_8bit:aReg|RegOut[4]              ; Reg_8bit:yReg|RegOut[4]              ; clk          ; clk         ; 0.000        ; -0.005     ; 1.042      ;
+; 0.900 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.047      ; 1.099      ;
+; 0.905 ; Reg_8bit:aReg|RegOut[7]              ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; -0.029     ; 1.028      ;
+; 0.908 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.060      ;
+; 0.910 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[4]             ; clk          ; clk         ; 0.000        ; -0.019     ; 1.043      ;
+; 0.912 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ; ROM:ROM1|data_out_ROM[2]             ; clk          ; clk         ; 0.000        ; -0.019     ; 1.045      ;
+; 0.916 ; Reg_8bit:aReg|RegOut[5]              ; Reg_8bit:aReg|RegOut[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.916 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.020      ; 1.088      ;
+; 0.935 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; 0.343      ; 1.430      ;
+; 0.935 ; ROM:ROM1|data_out_ROM[5]             ; Reg_8bit:bReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.343      ; 1.430      ;
+; 0.935 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:yReg|RegOut[7]              ; clk          ; clk         ; 0.000        ; 0.020      ; 1.107      ;
+; 0.937 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:aReg|RegOut[1]              ; clk          ; clk         ; 0.000        ; 0.035      ; 1.124      ;
+; 0.937 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:yReg|RegOut[0]              ; clk          ; clk         ; 0.000        ; -0.037     ; 1.052      ;
+; 0.937 ; Reg_8bit:aReg|RegOut[6]              ; Reg_8bit:bReg|RegOut[6]              ; clk          ; clk         ; 0.000        ; -0.002     ; 1.087      ;
+; 0.937 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ; ROM:ROM1|data_out_ROM[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.089      ;
+; 0.939 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:aReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.029      ; 1.120      ;
+; 0.939 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[6]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.387      ;
+; 0.940 ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ; ROM:ROM1|data_out_ROM[1]             ; clk          ; clk         ; 0.000        ; 0.296      ; 1.388      ;
+; 0.941 ; ROM:ROM1|data_out_ROM[7]             ; Reg_8bit:bReg|RegOut[1]              ; clk          ; clk         ; 0.000        ; 0.035      ; 1.128      ;
+; 0.942 ; ROM:ROM1|data_out_ROM[6]             ; Reg_8bit:yReg|RegOut[3]              ; clk          ; clk         ; 0.000        ; 0.030      ; 1.124      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCnMUX:PCxMUX1|Reg_8bit:PC|RegOut[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM:ROM1|data_out_ROM[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:aReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:bReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Reg_8bit:yReg|RegOut[7]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCxMUX1|PC|RegOut[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCxMUX1|PC|RegOut[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ROM1|data_out_ROM[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ROM1|data_out_ROM[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ROM1|data_out_ROM[1]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; inputSignal[*]  ; clk        ; 5.330 ; 5.330 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; 5.330 ; 5.330 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; 5.207 ; 5.207 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; 5.218 ; 5.218 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; 4.885 ; 4.885 ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; 5.257 ; 5.257 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; 4.982 ; 4.982 ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; 5.183 ; 5.183 ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; 4.854 ; 4.854 ; Rise       ; clk             ;
+; rstn            ; clk        ; 3.086 ; 3.086 ; Rise       ; clk             ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; inputSignal[*]  ; clk        ; -3.727 ; -3.727 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; -4.120 ; -4.120 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; -4.289 ; -4.289 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; -4.032 ; -4.032 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; -3.884 ; -3.884 ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; -4.210 ; -4.210 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; -3.874 ; -3.874 ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; -3.948 ; -3.948 ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; -3.727 ; -3.727 ; Rise       ; clk             ;
+; rstn            ; clk        ; -2.129 ; -2.129 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 8.607  ; 8.607  ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 5.411  ; 5.411  ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 6.580  ; 6.580  ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 6.183  ; 6.183  ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 8.092  ; 8.092  ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 8.607  ; 8.607  ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 8.062  ; 8.062  ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 11.194 ; 11.194 ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 10.139 ; 10.139 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 10.807 ; 10.807 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 11.194 ; 11.194 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 10.185 ; 10.185 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 10.726 ; 10.726 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 10.102 ; 10.102 ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 10.170 ; 10.170 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 13.333 ; 13.333 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 12.765 ; 12.765 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 12.886 ; 12.886 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 12.857 ; 12.857 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 13.004 ; 13.004 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 12.895 ; 12.895 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 12.993 ; 12.993 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 13.333 ; 13.333 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 5.138 ; 5.138 ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 5.138 ; 5.138 ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 5.511 ; 5.511 ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 5.218 ; 5.218 ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 7.002 ; 7.002 ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 7.488 ; 7.488 ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 6.972 ; 6.972 ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 5.211 ; 5.211 ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 5.624 ; 5.624 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 6.298 ; 6.298 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 6.314 ; 6.314 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 5.680 ; 5.680 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 5.834 ; 5.834 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 5.211 ; 5.211 ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 5.656 ; 5.656 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 6.151 ; 6.151 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 6.151 ; 6.151 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 6.275 ; 6.275 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 6.390 ; 6.390 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 6.388 ; 6.388 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 6.422 ; 6.422 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 6.521 ; 6.521 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 6.719 ; 6.719 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.845   ; 0.290 ; N/A      ; N/A     ; -1.222              ;
+;  clk             ; -4.845   ; 0.290 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -146.69  ; 0.0   ; 0.0      ; 0.0     ; -41.222             ;
+;  clk             ; -146.690 ; 0.000 ; N/A      ; N/A     ; -41.222             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; inputSignal[*]  ; clk        ; 10.553 ; 10.553 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; 10.553 ; 10.553 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; 10.265 ; 10.265 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; 10.346 ; 10.346 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; 9.652  ; 9.652  ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; 10.167 ; 10.167 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; 9.560  ; 9.560  ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; 9.996  ; 9.996  ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; 9.234  ; 9.234  ; Rise       ; clk             ;
+; rstn            ; clk        ; 5.518  ; 5.518  ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; inputSignal[*]  ; clk        ; -3.727 ; -3.727 ; Rise       ; clk             ;
+;  inputSignal[0] ; clk        ; -4.120 ; -4.120 ; Rise       ; clk             ;
+;  inputSignal[1] ; clk        ; -4.289 ; -4.289 ; Rise       ; clk             ;
+;  inputSignal[2] ; clk        ; -4.032 ; -4.032 ; Rise       ; clk             ;
+;  inputSignal[3] ; clk        ; -3.884 ; -3.884 ; Rise       ; clk             ;
+;  inputSignal[4] ; clk        ; -4.210 ; -4.210 ; Rise       ; clk             ;
+;  inputSignal[5] ; clk        ; -3.874 ; -3.874 ; Rise       ; clk             ;
+;  inputSignal[6] ; clk        ; -3.948 ; -3.948 ; Rise       ; clk             ;
+;  inputSignal[7] ; clk        ; -3.727 ; -3.727 ; Rise       ; clk             ;
+; rstn            ; clk        ; -2.129 ; -2.129 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 17.651 ; 17.651 ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 10.749 ; 10.749 ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 13.388 ; 13.388 ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 12.482 ; 12.482 ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 16.502 ; 16.502 ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 17.651 ; 17.651 ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 16.472 ; 16.472 ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 24.173 ; 24.173 ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 21.589 ; 21.589 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 23.315 ; 23.315 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 24.173 ; 24.173 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 21.615 ; 21.615 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 22.793 ; 22.793 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 21.416 ; 21.416 ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 21.553 ; 21.553 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 28.613 ; 28.613 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 27.437 ; 27.437 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 27.681 ; 27.681 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 27.623 ; 27.623 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 27.897 ; 27.897 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 27.689 ; 27.689 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 27.925 ; 27.925 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 28.613 ; 28.613 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; ySegHund[*]  ; clk        ; 5.138 ; 5.138 ; Rise       ; clk             ;
+;  ySegHund[0] ; clk        ; 5.138 ; 5.138 ; Rise       ; clk             ;
+;  ySegHund[1] ; clk        ; 5.511 ; 5.511 ; Rise       ; clk             ;
+;  ySegHund[2] ; clk        ; 5.218 ; 5.218 ; Rise       ; clk             ;
+;  ySegHund[3] ; clk        ; 7.002 ; 7.002 ; Rise       ; clk             ;
+;  ySegHund[4] ; clk        ; 7.488 ; 7.488 ; Rise       ; clk             ;
+;  ySegHund[6] ; clk        ; 6.972 ; 6.972 ; Rise       ; clk             ;
+; ySegOne[*]   ; clk        ; 5.211 ; 5.211 ; Rise       ; clk             ;
+;  ySegOne[0]  ; clk        ; 5.624 ; 5.624 ; Rise       ; clk             ;
+;  ySegOne[1]  ; clk        ; 6.298 ; 6.298 ; Rise       ; clk             ;
+;  ySegOne[2]  ; clk        ; 6.314 ; 6.314 ; Rise       ; clk             ;
+;  ySegOne[3]  ; clk        ; 5.680 ; 5.680 ; Rise       ; clk             ;
+;  ySegOne[4]  ; clk        ; 5.834 ; 5.834 ; Rise       ; clk             ;
+;  ySegOne[5]  ; clk        ; 5.211 ; 5.211 ; Rise       ; clk             ;
+;  ySegOne[6]  ; clk        ; 5.656 ; 5.656 ; Rise       ; clk             ;
+; ySegTen[*]   ; clk        ; 6.151 ; 6.151 ; Rise       ; clk             ;
+;  ySegTen[0]  ; clk        ; 6.151 ; 6.151 ; Rise       ; clk             ;
+;  ySegTen[1]  ; clk        ; 6.275 ; 6.275 ; Rise       ; clk             ;
+;  ySegTen[2]  ; clk        ; 6.390 ; 6.390 ; Rise       ; clk             ;
+;  ySegTen[3]  ; clk        ; 6.388 ; 6.388 ; Rise       ; clk             ;
+;  ySegTen[4]  ; clk        ; 6.422 ; 6.422 ; Rise       ; clk             ;
+;  ySegTen[5]  ; clk        ; 6.521 ; 6.521 ; Rise       ; clk             ;
+;  ySegTen[6]  ; clk        ; 6.719 ; 6.719 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2863     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2863     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 158   ; 158  ;
+; Unconstrained Output Ports      ; 20    ; 20   ;
+; Unconstrained Output Port Paths ; 140   ; 140  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon May 31 17:26:12 2021
+Info: Command: quartus_sta EEET2475_FinalAssignment -c Top_level
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.845
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.845      -146.690 clk 
+Info (332146): Worst-case hold slack is 0.694
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.694         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -41.222 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.570
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.570       -42.052 clk 
+Info (332146): Worst-case hold slack is 0.290
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.290         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -41.222 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4561 megabytes
+    Info: Processing ended: Mon May 31 17:26:13 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

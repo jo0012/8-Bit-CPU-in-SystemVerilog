@@ -1,0 +1,59 @@
+00
+40
+51
+41
+51
+43
+51
+47
+51
+4F
+51
+60	// b = a = 15
+4F	// a = 15
+A0	// a = a + b = 30
+60	// b = a = 30
+41	// a = 1
+A0	// a = a + b = 31
+51	// load a into output (8'b00011111)
+A0	// a = a + b = 61
+60	// b = a = 61
+42	// a = 2
+A0	// a = a + b = 63
+51	// load a into output (8'b00111111)
+60	// b = a = 63
+A0	// a = a + b = 126
+60	// b = a = 126
+41	// a = 1
+A0	// a = a + b = 127
+51	// load a into output (8'b01111111)
+60	// b = a = 127
+A0	// a = a + b = 254
+60	// b = a = 254
+41	// a = 1
+A0	// a = a + b = 255
+51	// load a into output (8'b11111111)
+60	// b = a = 255
+A0	// a = a + b = 254 (overflowed)
+51	// load a into output (8'b11111110)
+60	// b = a = 254
+A0	// a = a + b = 252 (overflowed)
+51	// load a into output (8'b11111100)
+60	// b = a = 252
+A0	// a = a + b = 248 (overflowed)
+51	// load a into output (8'b11111000)
+60	// b = a = 252
+A0	// a = a + b = 240 (overflowed)
+51	// load a into output (8'b11110000)
+60	// b = a = 252
+A0	// a = a + b = 224 (overflowed)
+51	// load a into output (8'b11100000)
+60	// b = a = 252
+A0	// a = a + b = 192 (overflowed)
+51	// load a into output (8'b11000000)
+60	// b = a = 252
+A0	// a = a + b = 128 (overflowed)
+51	// load a into output (8'b10000000)
+40
+51
+10

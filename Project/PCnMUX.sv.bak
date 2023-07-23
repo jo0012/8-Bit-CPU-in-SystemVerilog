@@ -1,0 +1,41 @@
+module PCnMUX (PC_sel, clk_pc, rstn_pc, write_pc, cBusData, addr_PC);
+	// input and output for PCnMUX
+	input PC_sel;
+	input logic [7:0] cBusData;
+	input write_pc;
+	input clk_pc;
+	input rstn_pc;
+	output logic [7:0] addr_PC;
+	
+	// Inner input of a 2:1 MUX
+	logic [7:0] Incremented_PC;
+	
+	// Inner output of a 2:1 MUX
+	logic [7:0] MUX_out;
+	
+
+	/*
+	always @ (PC_sel)
+		begin
+			case (PC_sel)
+				1'b0: MUX_out = Incremented_PC;
+				1'b1: MUX_out = cBusData;
+				default MUX_out = Incremented_PC;
+			endcase
+		end
+	*/
+	
+	
+	assign MUX_out = (PC_sel == 1) ? cBusData : Incremented_PC;
+	// If PC_sel is true, the output of MUX shall be cBusData
+	// Otherwise, the output would be Incremented_PC
+	
+	Reg PC (.RegIn(MUX_out), 
+				.clk(clk_pc), 
+					.write_Reg(write_pc), 
+						.rstn(rstn_pc), 
+							.RegOut(addr_PC));
+	
+	assign Incremented_PC = addr_PC + 1'b1;
+	
+endmodule

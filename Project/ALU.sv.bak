@@ -1,0 +1,25 @@
+module ALU (aBusInput_ALU, bBusInput_ALU,f, cBus);
+	// 8 - bits of input
+	input logic [7:0] aBusInput_ALU;
+	input logic [7:0] bBusInput_ALU;
+	
+	input [2:0] f; // 3-bits of input
+	output logic [8:0] cBus;
+	
+	
+	// ALU
+	always @ (aBusInput_ALU or bBusInput_ALU or f)
+	begin
+		case(f)
+		3'b000: cBus = bBusInput_ALU;	// NOP , a = inputSig
+		3'b001: cBus = aBusInput_ALU;	// b = a, y = a
+		3'b010: cBus = aBusInput_ALU + 1'b1;	// a++
+		3'b011: cBus = bBusInput_ALU + 1'b1;	// b++
+		3'b100: cBus = aBusInput_ALU + bBusInput_ALU;	// a+b
+		3'b101: cBus = aBusInput_ALU - bBusInput_ALU;	// a-b
+		3'b110: cBus = aBusInput_ALU & bBusInput_ALU;	// a&b
+		3'b111: cBus = aBusInput_ALU | bBusInput_ALU;	// a|b
+		default cBus = 9'bx;
+		endcase
+	end
+endmodule
