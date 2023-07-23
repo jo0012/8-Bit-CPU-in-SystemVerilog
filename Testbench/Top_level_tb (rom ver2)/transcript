@@ -1,0 +1,94 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level_tb.mpf} 
+# Loading project Top_level_tb
+vsim -gui work.Top_level_tb
+# vsim -gui work.Top_level_tb 
+# Loading sv_std.std
+# Loading work.Top_level_tb
+# Loading work.Top_level
+# Loading work.PCnMUX
+# Loading work.Reg_8bit
+# Loading work.ROM
+# Loading work.ControlUnit
+# Loading work.bMux
+# Loading work.ALU
+# Loading work.Reg_1bit
+# Loading work.yBCD
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(88): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'cBusData'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/PCnMUX.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/PCxMUX1
+# ** Warning: (vsim-3017) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [TFMPC] - Too few port connections. Expected 9, found 8.
+# 
+#         Region: /Top_level_tb/DUT/ALU1
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'cBus'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/ALU.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/ALU1
+# ** Warning: (vsim-3722) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [TFMPC] - Missing connection for port 'rstn_ALU'.
+# 
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(105): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'RegIn'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_8bit.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yReg
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(105): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'RegOut'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_8bit.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yReg
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(106): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'yBcdIn'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/yBCD.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yBCD1
+add wave -position end  sim:/Top_level_tb/in_clk
+add wave -position end  sim:/Top_level_tb/rstn
+add wave -position end  sim:/Top_level_tb/inputSignalData
+add wave -position end  sim:/Top_level_tb/ySegHundData
+add wave -position end  sim:/Top_level_tb/ySegTenData
+add wave -position end  sim:/Top_level_tb/ySegOneData
+add wave -position end  sim:/Top_level_tb/CF
+add wave -position end  sim:/Top_level_tb/ZF
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Administrator  Hostname: DESKTOP-079H808  ProcessID: 17364
+# 
+#           Attempting to use alternate WLF file "./wlft24ygh8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft24ygh8
+# 
+run
+run
+run
+run
+run
+run
+add wave -position 3  sim:/Top_level_tb/DUT/yBCD1/yBcdIn
+restart -f
+# Loading sv_std.std
+# Loading work.Top_level_tb
+# Loading work.Top_level
+# Loading work.PCnMUX
+# Loading work.Reg_8bit
+# Loading work.ROM
+# Loading work.ControlUnit
+# Loading work.bMux
+# Loading work.ALU
+# Loading work.Reg_1bit
+# Loading work.yBCD
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(88): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'cBusData'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/PCnMUX.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/PCxMUX1
+# ** Warning: (vsim-3017) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [TFMPC] - Too few port connections. Expected 9, found 8.
+# 
+#         Region: /Top_level_tb/DUT/ALU1
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'cBus'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/ALU.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/ALU1
+# ** Warning: (vsim-3722) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(103): [TFMPC] - Missing connection for port 'rstn_ALU'.
+# 
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(105): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'RegIn'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_8bit.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yReg
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(105): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'RegOut'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_8bit.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yReg
+# ** Warning: (vsim-3015) C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv(106): [PCDPC] - Port size (8 or 8) does not match connection size (9) for port 'yBcdIn'. The port definition is at: C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/yBCD.sv(1).
+# 
+#         Region: /Top_level_tb/DUT/yBCD1
+run
+run

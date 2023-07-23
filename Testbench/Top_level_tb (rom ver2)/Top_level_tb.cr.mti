@@ -1,0 +1,64 @@
+./Reg_8bit.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_8bit.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Reg_8bit
+
+Top level modules:
+	Reg_8bit
+
+} {} {}} ./bMux.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/bMux.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module bMux
+
+Top level modules:
+	bMux
+
+} {} {}} ./Reg_1bit.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Reg_1bit.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Reg_1bit
+
+Top level modules:
+	Reg_1bit
+
+} {} {}} ./Top_level.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Top_level
+
+Top level modules:
+	Top_level
+
+} {} {}} ./ALU.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/ALU.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} ./ROM.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/ROM.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ROM
+
+Top level modules:
+	ROM
+
+} {} {}} ./yBCD.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/yBCD.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module yBCD
+
+Top level modules:
+	yBCD
+
+} {} {}} ./PCnMUX.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/PCnMUX.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PCnMUX
+
+Top level modules:
+	PCnMUX
+
+} {} {}} ./Top_level_tb.sv {1 {vlog -work work -sv {C:/Users/Administrator/Desktop/RMIT Documents/Bachelor/2021/2021 Semester 1/Advanced Digital Design 1/Assignments/Assignment/Jo(s3479811) - EEET2475 Assignment/Assignment_TB/Top_level_tb (rom ver2)/Top_level_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Top_level_tb
+
+Top level modules:
+	Top_level_tb
+
+} {} {}}
